@@ -33,7 +33,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         nameTextField.delegate = self
         
         // Set up views if editing an existing Meal.
-        // If the meal variable has a value (it is optional, so it may not be set), then this view must be displaying a preexisting Meal for editing, and so the corresponding details should be displayed rather than the defaults
+        // If the meal variable has a value (it is optional, so it may not be set), then this view must be displaying a preexisting Meal for editing, and so the corresponding details should be displayed rather than the defaults (as when creating a new Meal)
         if let meal = meal {
             navigationItem.title = meal.name
             nameTextField.text   = meal.name
