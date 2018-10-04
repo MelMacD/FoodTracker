@@ -2,6 +2,9 @@
 //  FoodTrackerTests.swift
 //  FoodTrackerTests
 //
+// These tests run on building the program and ensure that certain aspects are working as intended, to help prevent run-time errors that
+// would result from mis-use of the Meal class
+//
 //  Created by Melanie MacDonald on 2018-09-21.
 //  Copyright © 2018 Melanie MacDonald. All rights reserved.
 //
@@ -15,7 +18,7 @@ class FoodTrackerTests: XCTestCase {
     
     // Confirm that the Meal initializer returns a Meal object when passed valid parameters
     func testMealInitializationSucceeds() {
-        // Zero rating
+        // Zero rating, if the Meal object is successfully initialized the zeroRatingMeal variable will not be nil
         let zeroRatingMeal = Meal.init(name: "Zero", photo: nil, rating: 0)
         XCTAssertNotNil(zeroRatingMeal)
         
@@ -26,7 +29,7 @@ class FoodTrackerTests: XCTestCase {
     
     // Confirm that the Meal initializer returns nil when passed a negative rating or an empty name
     func testMealInitializationFails() {
-        // Negative rating
+        // Negative rating is not allowed, should return nil
         let negativeRatingMeal = Meal.init(name: "Negative", photo: nil, rating: -1)
         XCTAssertNil(negativeRatingMeal)
         
