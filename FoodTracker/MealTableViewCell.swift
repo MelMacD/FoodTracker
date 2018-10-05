@@ -13,7 +13,7 @@ import UIKit
 class MealTableViewCell: UITableViewCell {
     
     //MARK: Properties
-    // Provides these outlets as a way to modify or read the information within the cells that is displayed to the user
+    // Provides these outlets as a way to display the information for each meal in each cell to the user
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
